@@ -1,0 +1,79 @@
+.products {
+  margin-left: 200px;
+  padding: 2rem;
+  margin-top: 70px;
+}
+
+.products-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+.products-header .actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.search-input {
+  width: 100%;
+  max-width: 400px;
+  padding: 0.6rem;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+.products-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 10px;
+  overflow: auto;
+}
+
+.products-table th,
+.products-table td {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+.products-table th {
+  background-color: #f5f5f5;
+}
+
+.products-table img {
+  height: 40px;
+  object-fit: cover;
+}
+
+.products-table button {
+  margin-right: 0.5rem;
+  padding: 0.4rem 0.8rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.delete-btn {
+  background-color: #e53935;
+  color: white;
+}
+
+.products-table button:hover {
+  opacity: 0.9;
+}
+
+@media screen and (max-width: 768px) {
+  .products {
+    margin-left: 0;
+  }
+
+  .products-table {
+    display: block;
+    overflow-x: auto;
+  }
+}

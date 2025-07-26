@@ -1,0 +1,50 @@
+.customers-page {
+  padding: 2rem;
+}
+
+.add-customer-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.add-customer-form input {
+  padding: 0.5rem;
+  flex: 1 1 200px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.add-customer-form button {
+  padding: 0.5rem 1rem;
+  background-color: #1e1e2f;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.customers-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.customers-table th,
+.customers-table td {
+  border: 1px solid #ddd;
+  padding: 0.75rem;
+  text-align: left;
+}
+
+.customers-table th {
+  background-color: #f4f4f4;
+}
+
+.delete-btn {
+  background-color: #e63946;
+  color: white;
+  border: none;
+  padding: 0.3rem 0.6rem;
+  border-radius: 4px;
+  cursor: pointer;
+}

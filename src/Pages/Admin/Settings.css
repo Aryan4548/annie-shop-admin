@@ -1,0 +1,53 @@
+.settings-container {
+  max-width: 600px;
+  margin: auto;
+  background: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+}
+
+.settings-container h2 {
+  margin-bottom: 1.5rem;
+  font-size: 24px;
+}
+
+.settings-container label {
+  display: block;
+  margin: 1rem 0 0.5rem;
+  font-weight: bold;
+}
+
+.settings-container input {
+  width: 100%;
+  padding: 0.7rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.settings-container button {
+  margin-top: 2rem;
+  padding: 0.8rem 1.5rem;
+  background-color: #181825;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.profile-preview {
+  margin-top: 1rem;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.products-container table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.products-container th, .products-container td {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+}
