@@ -18,7 +18,7 @@ const AdminLogin = () => {
     setError("");
 
     try {
-      const res = await axios.post("https://annieshop-backend.onrender.com", form);
+      const res = await axios.post("https://annieshop-backend.onrender.com/admin/login", form);
       if (res.data.success) {
         localStorage.setItem("adminToken", res.data.token);
         navigate("/admin/dashboard"); // Redirect to admin dashboard
