@@ -11,7 +11,7 @@ const Orders = () => {
   useEffect(() => {
   const fetchOrders = async () => {
     try {
-      const res = await axios.get('http://localhost:4000/allorders');
+      const res = await axios.get('https://annieshop-backend.onrender.com/allorders');
       const sorted = res.data.sort((a, b) => new Date(b.date) - new Date(a.date));
       setOrders(sorted);
     } catch (err) {
