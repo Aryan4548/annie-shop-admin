@@ -72,7 +72,7 @@ const ProductForm = ({ isOpen, onClose, onSave, editData }) => {
         const formData = new FormData();
         files.forEach(file => formData.append('files', file));
 
-        const res = await axios.post('http://localhost:4000/upload/multiple', formData, {
+        const res = await axios.post('https://annieshop-backend.onrender.com/upload/multiple', formData, {
           onUploadProgress: (progressEvent) => {
             const percentCompleted = Math.round((progressEvent.loaded * 100) / progressEvent.total);
             setUploadProgress({ total: percentCompleted });
@@ -85,9 +85,9 @@ const ProductForm = ({ isOpen, onClose, onSave, editData }) => {
       const payload = { ...form, images: imageUrls };
 
       if (editData) {
-        await axios.post('http://localhost:4000/updateproduct', { id: form.id, ...payload });
+        await axios.post('https://annieshop-backend.onrender.com/updateproduct', { id: form.id, ...payload });
       } else {
-        await axios.post('http://localhost:4000/addproduct', payload);
+        await axios.post('https://annieshop-backend.onrender.com/addproduct', payload);
       }
 
       setUploading(false);
