@@ -14,7 +14,7 @@ const Customers = () => {
   // Fetch all customers
   const fetchCustomers = async () => {
     try {
-      const res = await axios.get('https://annieshop-backend.onrender.com');
+      const res = await axios.get('https://annieshop-backend.onrender.com/allcustomers');
       setCustomers(res.data);
     } catch (err) {
       console.error("Error fetching customers:", err);
