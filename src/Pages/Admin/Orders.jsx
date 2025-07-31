@@ -34,7 +34,7 @@ const Orders = () => {
 
   const handleUpdateStatus = async () => {
     try {
-      await axios.post('http://localhost:4000/updateorderstatus', {
+      await axios.post('https://annieshop-backend.onrender.com/updateorderstatus', {
         id: selectedOrder.id,
         status
       });
@@ -98,7 +98,7 @@ const Orders = () => {
             <ul className="modal-products">
               {selectedOrder.products.map((p, idx) => (
                 <li key={idx} className="modal-product">
-                  <img src={`http://localhost:4000/images/${p.image}`} alt={p.name} />
+                  <img src={`https://annieshop-backend.onrender.com/images/${p.image}`} alt={p.name} />
                   <span>{p.name} × {p.quantity} = ₹{p.new_price * p.quantity}</span>
                 </li>
               ))}
