@@ -13,7 +13,7 @@ const Settings = () => {
   useEffect(() => {
     const fetchSettings = async () => {
       try {
-        const res = await axios.get('http://localhost:4000/admin/settings');
+        const res = await axios.get('https://annieshop-backend.onrender.com/admin/settings');
         if (res.data) {
           setDomain(res.data.domain || '');
           setEmail(res.data.email || '');
@@ -30,7 +30,7 @@ const Settings = () => {
     if (!selectedFile) return profileImg;
     const formData = new FormData();
     formData.append('profile', selectedFile);
-    const res = await axios.post('http://localhost:4000/upload/profile', formData);
+    const res = await axios.post('https://annieshop-backend.onrender.com/upload/profile', formData);
     return res.data.image_url;
   };
 
@@ -47,7 +47,7 @@ const Settings = () => {
         ...(password && { password }) // include only if password is filled
       };
 
-      await axios.post('http://localhost:4000/admin/settings', payload);
+      await axios.post('https://annieshop-backend.onrender.com/admin/settings', payload);
       alert('Settings updated successfully!');
       setPassword('');
     } catch (err) {
