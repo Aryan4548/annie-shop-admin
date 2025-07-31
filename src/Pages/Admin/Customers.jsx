@@ -29,7 +29,7 @@ const Customers = () => {
   const handleAdd = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('http://localhost:4000/addcustomer', newCustomer);
+      await axios.post('https://annieshop-backend.onrender.com/addcustomer', newCustomer);
       setNewCustomer({ name: '', email: '', joined: '', totalOrders: '' });
       fetchCustomers();
     } catch (err) {
@@ -40,7 +40,7 @@ const Customers = () => {
   // Delete customer
   const handleDelete = async (id) => {
     try {
-      await axios.post('http://localhost:4000/removecustomer', { id });
+      await axios.post('https://annieshop-backend.onrender.com/removecustomer', { id });
       fetchCustomers();
     } catch (err) {
       console.error("Error deleting customer:", err);
