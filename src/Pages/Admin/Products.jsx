@@ -12,7 +12,7 @@ const Products = () => {
 
   const fetchProducts = async () => {
     try {
-      const res = await axios.get('http://localhost:4000/allproducts');
+      const res = await axios.get('https://annieshop-backend.onrender.com/allproducts');
       setProducts(res.data);
       setFiltered(res.data);
     } catch (err) {
@@ -31,7 +31,7 @@ const Products = () => {
 
   const handleDelete = async (id) => {
     try {
-      await axios.post('http://localhost:4000/removeproduct', { id });
+      await axios.post('https://annieshop-backend.onrender.com/removeproduct', { id });
       fetchProducts();
     } catch (err) {
       console.error("Error deleting product:", err);
@@ -45,7 +45,7 @@ const Products = () => {
 
   const togglePopular = async (id, isPopular) => {
     try {
-      const res = await axios.post('http://localhost:4000/togglepopular', {
+      const res = await axios.post('https://annieshop-backend.onrender.com/togglepopular', {
         id,
         popular: !isPopular
       });
@@ -69,7 +69,7 @@ const Products = () => {
         try {
           const productArray = JSON.parse(event.target.result);
           for (const product of productArray) {
-            await axios.post('http://localhost:4000/addproduct', product);
+            await axios.post('https://annieshop-backend.onrender.com/addproduct', product);
           }
           fetchProducts();
         } catch (err) {
@@ -84,7 +84,7 @@ const Products = () => {
         complete: async function (results) {
           for (const product of results.data) {
             try {
-              await axios.post('http://localhost:4000/addproduct', product);
+              await axios.post('https://annieshop-backend.onrender.com/addproduct', product);
             } catch (err) {
               console.error('Error adding from CSV row:', err);
             }
