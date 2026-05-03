@@ -1,0 +1,84 @@
+.products-page {
+  gap: 22px;
+}
+
+.products-search-shell {
+  width: min(100%, 320px);
+}
+
+.bulk-upload-label {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.product-cell {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.product-thumbs {
+  display: flex;
+  align-items: center;
+  margin-right: 2px;
+}
+
+.product-thumb {
+  width: 46px;
+  height: 46px;
+  object-fit: cover;
+  border-radius: 16px;
+  border: 1px solid var(--border-soft);
+  margin-left: -8px;
+  background: var(--panel-alt);
+}
+
+.product-thumbs .product-thumb:first-child {
+  margin-left: 0;
+}
+
+.product-thumb-fallback {
+  display: grid;
+  place-items: center;
+  color: var(--text-faint);
+  font-size: 0.72rem;
+  font-weight: 700;
+}
+
+.product-meta strong,
+.price-stack strong {
+  display: block;
+  color: var(--text-primary);
+}
+
+.product-meta span,
+.price-stack span {
+  color: var(--text-muted);
+  font-size: 0.86rem;
+}
+
+.stock-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 12px;
+  border-radius: 999px;
+  font-size: 0.82rem;
+  font-weight: 600;
+}
+
+.stock-pill.available {
+  background: rgba(74, 222, 128, 0.12);
+  color: #bbf7d0;
+}
+
+.stock-pill.out {
+  background: rgba(248, 113, 113, 0.12);
+  color: #fecaca;
+}
+
+.table-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}

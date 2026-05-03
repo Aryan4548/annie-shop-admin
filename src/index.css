@@ -1,0 +1,147 @@
+:root {
+  color-scheme: dark;
+  --bg-start: #07111f;
+  --bg-end: #111c2d;
+  --panel: rgba(14, 23, 37, 0.78);
+  --panel-alt: rgba(12, 19, 31, 0.92);
+  --panel-strong: #101927;
+  --border-soft: rgba(255, 255, 255, 0.08);
+  --border-strong: rgba(255, 255, 255, 0.12);
+  --text-primary: #f4f8fb;
+  --text-muted: #97a7ba;
+  --text-faint: #6b7b8d;
+  --accent-cyan: #7dd3fc;
+  --accent-lime: #bef264;
+  --accent-gold: #facc15;
+  --shadow-panel: 0 24px 60px rgba(3, 9, 18, 0.32);
+  font-family: Inter, "Segoe UI", sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  cursor: default;
+}
+
+body :is(
+  p,
+  span,
+  li,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  small,
+  strong,
+  em,
+  b,
+  i
+) {
+  cursor: text;
+}
+
+body :is(
+  a,
+  button,
+  summary,
+  label,
+  select,
+  [role="button"],
+  [role="link"],
+  [tabindex]:not([tabindex="-1"]),
+  input[type="button"],
+  input[type="checkbox"],
+  input[type="color"],
+  input[type="date"],
+  input[type="datetime-local"],
+  input[type="file"],
+  input[type="month"],
+  input[type="radio"],
+  input[type="range"],
+  input[type="reset"],
+  input[type="submit"],
+  input[type="time"],
+  input[type="week"]
+),
+body :is(
+  a,
+  button,
+  summary,
+  label,
+  select,
+  [role="button"],
+  [role="link"],
+  [tabindex]:not([tabindex="-1"])
+) * {
+  cursor: pointer;
+}
+
+body :is(
+  input:not([type]),
+  input[type="email"],
+  input[type="number"],
+  input[type="password"],
+  input[type="search"],
+  input[type="tel"],
+  input[type="text"],
+  input[type="url"],
+  textarea,
+  [contenteditable="true"]
+) {
+  cursor: text;
+}
+
+body :is(
+  button,
+  input,
+  select,
+  textarea,
+  [role="button"],
+  [role="link"],
+  [tabindex]
+):disabled,
+body [aria-disabled="true"] {
+  cursor: not-allowed;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  color: var(--text-primary);
+  background:
+    radial-gradient(circle at top left, rgba(125, 211, 252, 0.1), transparent 32%),
+    radial-gradient(circle at top right, rgba(250, 204, 21, 0.08), transparent 26%),
+    linear-gradient(180deg, var(--bg-start), var(--bg-end));
+  background-attachment: fixed;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
