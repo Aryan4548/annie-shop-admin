@@ -9,16 +9,16 @@ import API_BASE_URL from '../../config/api';
 const weekdayFormatter = new Intl.DateTimeFormat('en-US', { weekday: 'short' });
 
 const formatCurrency = (value) =>
-  new Intl.NumberFormat('en-US', {
+  new Intl.NumberFormat('en-IN', {
     style: 'currency',
-    currency: 'USD',
+    currency: 'INR',
     maximumFractionDigits: value >= 1000 ? 0 : 2,
   }).format(value || 0);
 
 const formatCompactCurrency = (value) =>
-  new Intl.NumberFormat('en-US', {
+  new Intl.NumberFormat('en-IN', {
     style: 'currency',
-    currency: 'USD',
+    currency: 'INR',
     notation: 'compact',
     maximumFractionDigits: 1,
   }).format(value || 0);
